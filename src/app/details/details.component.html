@@ -1,0 +1,36 @@
+
+<div class="overflow-x-auto container mx-auto max-w-4xl py-12">
+  <table class="min-w-full divide-y-2 divide-gray-200  text-sm">
+    <thead class="ltr:text-left rtl:text-right">
+      <tr>
+        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 text-left">Name</th>
+        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 text-left">Age</th>
+        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 text-left">Department</th>
+        <th class="px-4 py-2"></th>
+      </tr>
+    </thead>
+
+    <tbody class="divide-y divide-gray-200">
+      <tr *ngFor="let employee of myData" >
+        <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">{{employee.name}}</td>
+        <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{employee.age}}</td>
+        <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{employee.department}}</td>
+        <td class="whitespace-nowrap px-4 py-2">
+          <a
+            href="#"
+            class="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
+          >
+            Edit/Delete
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="flex justify-center items-center">
+    <button class="flex border-2 border-gray-900 rounded p-2" routerLink="/form">Add new</button>
+</div>
+
+
+
