@@ -16,4 +16,8 @@ export class DetailsComponent {
     this.myData = this.dataService.getData();
   }
   sample = employees;
+
+  deleteEmployee(name: string){
+    this.dataService.deleteData(name);
+  }
 }
