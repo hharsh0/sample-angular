@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { employees } from 'src/data/data';
+import employeeData from "../data/data.json";
 
 @Injectable({
   providedIn: 'root',
 })
 export class DataService {
-  sampleData = employees;
+  sampleData = employeeData.employees;
 
   constructor() {}
 
@@ -13,7 +13,12 @@ export class DataService {
     return this.sampleData;
   }
 
-  pushData(data: { name: string; age: number; department: string, isEditing: boolean }) {
+  pushData(data: {
+    name: string;
+    age: number;
+    department: string;
+    isEditing: boolean;
+  }) {
     this.sampleData.push(data);
   }
 

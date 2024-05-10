@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { employees } from 'src/data/data';
+import employeeData from 'src/data/data.json'
 import { DataService } from '../data.service';
 import { MatButtonModule } from '@angular/material/button';
 
@@ -15,9 +15,13 @@ export class DetailsComponent {
   constructor() {
     this.myData = this.dataService.getData();
   }
-  sample = employees;
+  sample = employeeData;
 
   deleteEmployee(name: string){
     this.dataService.deleteData(name);
+  }
+
+  logData(){
+    console.log(this.myData);
   }
 }

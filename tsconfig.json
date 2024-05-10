@@ -5,6 +5,8 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
@@ -18,14 +20,9 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ],
+    "lib": ["ES2022", "dom"],
     "paths": {
-      "@spartan-ng/ui-table-helm": [
-        "./ui-table-helm/src/index.ts"
-      ]
+      "@spartan-ng/ui-table-helm": ["./ui-table-helm/src/index.ts"]
     }
   },
   "angularCompilerOptions": {

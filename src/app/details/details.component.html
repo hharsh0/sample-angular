@@ -33,7 +33,7 @@
           </button>
           <button
           *ngIf="employee.isEditing"
-            (click)="employee.isEditing = false"
+            (click)="employee.isEditing = false; logData()"
             class="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
           >
             Save
