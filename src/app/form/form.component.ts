@@ -16,15 +16,18 @@ export class FormComponent {
     this.userForm = new FormGroup({
       name: new FormControl(''),
       age: new FormControl(''),
-      department: new FormControl(''),
+      department: new FormControl('')
     });
   }
 
   onSubmit() {
     if (this.userForm.valid) {
-      console.log('Form submitted:', this.userForm.value);
-      this.dataService.pushData(this.userForm.value);
-       this.router.navigate(['/']);
+      const formData = {
+        ...this.userForm.value, isEditing: false
+      };
+      console.log('Form submitted:', formData);
+      this.dataService.pushData(formData);
+      this.router.navigate(['/']);
     }
   }
 }

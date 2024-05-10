@@ -13,7 +13,7 @@ export class DataService {
     return this.sampleData;
   }
 
-  pushData(data: { name: string; age: number; department: string }) {
+  pushData(data: { name: string; age: number; department: string, isEditing: boolean }) {
     this.sampleData.push(data);
   }
 
